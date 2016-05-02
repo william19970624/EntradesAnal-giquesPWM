@@ -12,20 +12,23 @@
 
 int durada;        // temps de durada
 int freq;          // frecuencia correspondiente a la nota
-int pin9 = 9;      // pin del zumbador
+int pin = 9;      // pin del altavoz
+
   
     
 
 //****** secup ***********************************************************
 
 void setup(){
+  pinMode( pin,OUTPUT);
 }
 
 //****** Loop ************************************************************
 void loop() {
-durada = analogRead(A0)*10;
-freq = analogRead(A1);
+  durada = analogRead(A0)*10; 
+  freq = analogRead(A1);
  
-tone(pin9,freq,durada); 
-delay(10000);
+  tone(pin,1000,500); 
+  
+  delay(690);
 }
