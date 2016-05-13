@@ -16,6 +16,12 @@ int ldr2 = A1;
 int ldr3 = A2;        
 int durada;   
 
+//Definir variable
+int=vldr1;
+int=vldr2;
+int=vldr3;
+  
+
 //****** secup ***********************************************************
 {
 // Actualitzar valors dels Ldr
@@ -23,14 +29,10 @@ int durada;
   vLdr2 = analogRead(ldr2);
   vLdr3 = analogRead(ldr3);
 
-  //Definir variable
-  int=vldr1;
-  int=vldr2;
-  int=vldr3;
-  
+
   
 }
-º
+
 //****** Loop ************************************************************
 void loop()
 {
