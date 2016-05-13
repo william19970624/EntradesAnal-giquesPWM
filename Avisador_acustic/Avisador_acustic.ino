@@ -37,7 +37,15 @@ void loop()
   // Comparar valors per saber de quin LDR dona la durada del so
   durada = min(vLdr1, vLdr2); 
   durada = min(vLdr3, durada);
+
+
+  //Temps de durada del so
+ tone(altaveu, 1000, durada);
+
+ //Retard entre fases
+ delay(3*durada);
+
  
 }
   
-}
+
