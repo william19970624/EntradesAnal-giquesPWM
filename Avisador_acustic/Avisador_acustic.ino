@@ -27,5 +27,17 @@ int durada;
 }
 
 //****** Loop ************************************************************
+void loop()
+{
+  // Atualizacio del valors dels LDR
+  vLdr1 = analogRead(ldr1);
+  vLdr2 = analogRead(ldr2);
+  vLdr3 = analogRead(ldr3);
 
+  // Comparar valors per saber de quin LDR dona la durada del so
+  durada = min(vLdr1, vLdr2); 
+  durada = min(vLdr3, durada);
+ 
+}
+  
 }
