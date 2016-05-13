@@ -22,11 +22,11 @@ int vldr2;
 int vldr3;
   
 
-//****** secup ***********************************************************
+//****** Setup ***********************************************************
 void setup()
 {
   pinMode(altaveu, OUTPUT);     // Definir altaveu com a sortida
-  pinMode (13, OUTPUT);
+  pinMode (9, OUTPUT);
   }
 
 //****** Loop ************************************************************
@@ -34,21 +34,20 @@ void loop()
 {
   // Atualizacio del valors dels LDR
   vldr1 = analogRead(ldr1);
-  vldr2 = analogRead(ldr2);
+  vldr2 = analogRead(ldr2); 
   vldr3 = analogRead(ldr3);
 
   // Comparar valors per saber de quin ldr dona la durada del so
   durada = min(vldr1, vldr2); 
   durada = min(vldr3, durada);
 
-    // Pasar el rang de 0-1023 a 5-2000
-  durada = map(durada, 300, 1023,5,2000);
+    
 
   //Temps de durada del so
    tone(altaveu, 1000, durada);
 
  //Retard entre fases
- delay(3*durada);
+ delay(2*durada);
 
  
 }
