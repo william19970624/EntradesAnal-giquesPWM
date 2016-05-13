@@ -41,6 +41,8 @@ void loop()
   durada = min(vLdr1, vLdr2); 
   durada = min(vLdr3, durada);
 
+  // Pasar el rang de 0-1023 a 5-2000
+  durada = map(durada, 300, 1023,5,2000);
 
   //Temps de durada del so
  tone(altaveu, 1000, durada);
